@@ -1,2 +1,2 @@
 # OpenStandards
-A curation of various standards, specs, schemas
+A curation of various standards, specifications, and schemas used in the US Government

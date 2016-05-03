@@ -1,0 +1,29 @@
+{
+  "name": "openstandards",
+  "version": "1.0.0",
+  "description": "attempt to curate open standards across the US Federal Gov",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJediny/OpenStandards.git"
+  },
+  "keywords": [
+    "open",
+    "standards",
+    "it",
+    "tech",
+    "data",
+    "interoperablity"
+  ],
+  "author": "John Jediny (GSA)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JJediny/OpenStandards/issues"
+  },
+  "homepage": "https://github.com/JJediny/OpenStandards#readme"
+}

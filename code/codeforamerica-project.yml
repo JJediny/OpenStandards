@@ -1,0 +1,52 @@
+#Source: http://codeforamerica.org/api/#project-properties
+---
+  id: 1
+  name: "cityvoice"
+  link_url: "http://www.cityvoiceapp.com/"
+  code_url: "https://github.com/codeforamerica/cityvoice"
+  api_url: "http://codeforamerica.org/api/projects/1"
+  categories: "community engagement, housing"
+  status: "In Progress"
+  description: "A place-based call-in system for gathering and sharing community feedback"
+  organization: {}
+  organization_name: "Code for America"
+  tags:
+    - "community engagement"
+  type: "web service"
+  github_details:
+    id: 10515516
+    contributors: []
+    contributors_url: "https://api.github.com/repos/codeforamerica/cityvoice/contributors"
+    created_at: "2013-06-06T00:12:30Z"
+    description: "A place-based call-in system for gathering and sharing community feedback"
+    forks_count: 18
+    homepage: "http://www.cityvoiceapp.com/"
+    html_url: "https://github.com/codeforamerica/cityvoice"
+    name: "cityvoice"
+    open_issues: 38
+    owner: {}
+    participation:
+      - 0
+    project_needs: []
+    pushed_at: "2014-03-29T20:03:41Z"
+    updated_at: "2014-03-29T20:03:41Z"
+    watchers_count: 14
+  issues:
+    -
+      id: 1
+      title: "Consider using Universal Analytics for Google Analytics"
+      api_url: "http://codeforamerica.org/api/issues/193"
+      body: "Google has officially released Universal Analytics about 2 months ago, …"
+      html_url: "https://github.com/codeforamerica/cityvoice/issues/193"
+      labels:
+        -
+          color: "84b6eb"
+          name: "enhancement"
+          url: "https://api.github.com/repos/codeforamerica/cityvoice/labels/enhancement"
+      project: {}
+      project_name: "cityvoice"
+    - {}
+  languages:
+    - "Python"
+    - "CSS"
+    - "HTML"

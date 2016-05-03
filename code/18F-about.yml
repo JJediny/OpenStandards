@@ -1,0 +1,209 @@
+# Source: https://github.com/18F/about_yml/blob/master/lib/about_yml/schema.json
+---
+  title: ".about.yml - .about.yml files"
+  description: ".about.yml project metadata"
+  $schema: "http://json-schema.org/draft-04/hyper-schema"
+  type: "object"
+  properties:
+    name:
+      type: "string"
+      description: "This is a short name of your project that can be used as a URL slug."
+    full_name:
+      type: "string"
+      description: "This is the display name of your project."
+    description:
+      type: "string"
+      description: "What is the problem your project solves? What is the solution? Use the format shown below. The #dashboard team will gladly help you put this together for your project."
+    impact:
+      type: "string"
+      description: "What is the measurable impact of your project? Use the format shown below. The #dashboard team will gladly help you put this together for your project."
+    owner_type:
+      type: "string"
+      description: "What kind of team owns the repository?"
+      enum:
+        - "guild"
+        - "working-group"
+        - "project"
+    stage:
+      type: "string"
+      description: "What is your project's current status?"
+      enum:
+        - "discovery"
+        - "alpha"
+        - "beta"
+        - "live"
+    testable:
+      type: "boolean"
+      default: false
+      description: "Should this repo have automated tests? If so, set to `true`."
+    licenses:
+      type: "object"
+      description: "What are the licenses that apply to the project and/or its components?"
+      patternProperties:
+        .*:
+          $ref: "#/definitions/license"
+    partners:
+      type: "array"
+      description: "Who is the partner for your project? (Use the full name of the partner documented here: https://github.com/18F/dashboard/blob/staging/_data/partners.yml)"
+      items:
+        type: "string"
+      uniqueItems: true
+    contact:
+      type: "array"
+      description: "The main point of contact(s) and/or the issue reporting system for your project, and either a `mailto:` link or URL for each contact."
+      items:
+        $ref: "#/definitions/contact"
+      uniqueItems: true
+    team:
+      type: "array"
+      description: "Who are the team members on your project? You can specify GitHub usernames, email addresses, or other organizational usernames."
+      items:
+        $ref: "#/definitions/person"
+      uniqueItems: true
+    type:
+      type: "string"
+      description: "What kind of content is contained in the project repository?"
+      enum:
+        - "app"
+        - "docs"
+        - "policy"
+    milestones:
+      type: "array"
+      description: "What are the key milestones you've achieved recently?"
+      items:
+        type: "string"
+      uniqueItems: true
+    parent:
+      type: "string"
+      description: "Name of the main project repo if this is a sub-repo; name of the grouplet repo if this is a working group/guild subproject"
+    links:
+      type: "array"
+      description: "What are the links to key artifacts associated with your project? e.g. the production site, documentation."
+      items:
+        $ref: "#/definitions/link"
+      format: "uri"
+      uniqueItems: true
+    blogTag:
+      type: "array"
+      description: "What tags does your organization's blog associate with your project? You can find a list of 18F blog tags here: https://18f.gsa.gov/tags/"
+      items:
+        type: "string"
+      uniqueItems: true
+    stack:
+      type: "array"
+      description: "What technologies are used in this project?"
+      items:
+        type: "string"
+      uniqueItems: true
+    services:
+      type: "array"
+      description: "What are the services used to supply project status information?"
+      items:
+        $ref: "#/definitions/service"
+      uniqueItems: true
+    users:
+      type: "array"
+      description: "Organizations or individuals who have adopted the project for their own use"
+      items:
+        $ref: "#/definitions/user"
+      uniqueItems: true
+    tags:
+      type: "array"
+      description: "Tags that describe the project or aspects of the project"
+      items:
+        type: "string"
+      uniqueItems: true
+  required:
+    - "name"
+    - "full_name"
+    - "description"
+    - "impact"
+    - "stage"
+    - "team"
+    - "licenses"
+    - "owner_type"
+    - "testable"
+  definitions:
+    person:
+      type: "object"
+      description: "Individual contributor to the project"
+      properties:
+        github:
+          type: "string"
+          description: "GitHub user name"
+        id:
+          type: "string"
+          description: "Internal team identifier/user name"
+        role:
+          type: "string"
+          description: "Team member's role; leads should be designated as 'lead'"
+    user:
+      type: "object"
+      description: "Organizations or individuals who have adopted the project for their own use"
+      properties:
+        id:
+          type: "string"
+          description: "The name of the organization or individual"
+        url:
+          type: "string"
+          description: "A URL to the user's version of the project"
+    service:
+      type: "object"
+      description: "Service used to provide project status"
+      properties:
+        name:
+          type: "string"
+          description: "Name of the service"
+        category:
+          type: "string"
+          description: "Type of the service"
+        url:
+          type: "string"
+          description: "URL for detailed information"
+          format: "uri"
+        badge:
+          type: "string"
+          description: "URL for the status badge"
+          format: "uri"
+    license:
+      type: "object"
+      description: "License under which the project (or a component of the project) is offered"
+      properties:
+        name:
+          type: "string"
+          description: "Name of the license from the Software Package Data Exchange (SPDX): https://spdx.org/licenses/"
+        url:
+          type: "string"
+          description: "URL for the text of the license"
+          format: "uri"
+    link:
+      type: "object"
+      description: "Link to a project artifact"
+      properties:
+        url:
+          type: "string"
+          description: "URL for the link"
+          format: "uri"
+        text:
+          type: "string"
+          description: "Anchor text for the link"
+        category:
+          type: "string"
+          description: "Type of the link"
+          enum:
+            - "api"
+            - "process"
+            - "related"
+      required:
+        - "url"
+    contact:
+      type: "object"
+      description: "Link to a project contact"
+      properties:
+        url:
+          type: "string"
+          description: "URL for the link"
+          format: "uri"
+        text:
+          type: "string"
+          description: "Anchor text for the link"

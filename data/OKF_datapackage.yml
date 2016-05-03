@@ -1,0 +1,29 @@
+# Source: http://spec.dataportals.org/
+---
+  id: "http://example.com/data/test-dataset-1"
+  title: "A test dataset on your catalogue"
+  description: "A longer description of the dataset"
+  landingPage: ""
+  issued: "2012-05-10"
+  modified: "2012-05-10T21:04"
+  language:
+    - "en"
+    - "es"
+    - "ca"
+  publisher:
+    name: "Name of the Publishing Organization"
+    mbox: "contact@some.org"
+  keyword: ""
+  distribution:
+    -
+      title: "Test resource CSV file"
+      description: "A longer description of this file"
+      format: "text/csv"
+      downloadURL: "http://url.to.csv.file"
+      license: "https://url.to.license"
+    -
+      title: "Test resource HTML page"
+      description: "A longer description of this page"
+      format: "text/html"
+      accessURL: "http://url.to.html.page"
+      license: "https://url.to.license"
