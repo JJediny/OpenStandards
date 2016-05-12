@@ -1,0 +1,2052 @@
+definitions:
+  abstractType:
+    type: string
+  purposeType:
+    type: string
+  supplinfType:
+    type: string
+  currentType:
+    type: string
+  updateType:
+    type: string
+  eastbcType:
+    type: string
+  northbcType:
+    type: string
+  southbcType:
+    type: string
+  gringlatType:
+    type: string
+  gringType:
+    type: string
+  themektType:
+    type: string
+  themekeyType:
+    type: string
+  placektType:
+    type: string
+  placekeyType:
+    type: string
+  stratktType:
+    type: string
+  stratkeyType:
+    type: string
+  tempktType:
+    type: string
+  tempkeyType:
+    type: string
+  accconstType:
+    type: string
+  useconstType:
+    type: string
+  browsenType:
+    type: string
+  browsedType:
+    type: string
+  browsetType:
+    type: string
+  datacredType:
+    type: string
+  secsysType:
+    type: string
+  secclassType:
+    type: string
+  sechandlType:
+    type: string
+  nativeType:
+    type: string
+  attraccrType:
+    type: string
+  attraccvType:
+    type: string
+  attracceType:
+    type: string
+  logicType:
+    type: string
+  completeType:
+    type: string
+  horizparType:
+    type: string
+  horizpavType:
+    type: number
+  horizpaeType:
+    type: string
+  vertaccrType:
+    type: string
+  vertaccvType:
+    type: number
+  vertacceType:
+    type: string
+  typesrcType:
+    type: string
+  srccurrType:
+    type: string
+  srccontrType:
+    type: string
+  procdescType:
+    type: string
+  procdateType:
+    type: string
+  proctimeType:
+    type: string
+  cloudType:
+    type: string
+  indsprefType:
+    type: string
+  rowcountType:
+    type: integer
+    minimum: 0
+    exclusiveMinimum: true
+  colcountType:
+    type: integer
+    minimum: 0
+    exclusiveMinimum: true
+  vrtcountType:
+    type: integer
+    minimum: 0
+    exclusiveMinimum: true
+  mapprojnType:
+    type: string
+  stdparllType:
+    type: string
+  latprjoType:
+    type: string
+  feastType:
+    type: number
+  fnorthType:
+    type: number
+  latprjcType:
+    type: string
+  obqllatType:
+    type: string
+  landsatType:
+    type: integer
+    minimum: 0
+    exclusiveMinimum: true
+  pathnumType:
+    type: integer
+    minimum: 0
+    exclusiveMinimum: true
+  otherprjType:
+    type: string
+  utmzoneType:
+    type: string
+  othergrdType:
+    type: string
+  localpdType:
+    type: string
+  localpgiType:
+    type: string
+  planduType:
+    type: string
+  localdesType:
+    type: string
+  localgeoType:
+    type: string
+  horizdnType:
+    type: string
+  ellipsType:
+    type: string
+  altdatumType:
+    type: string
+  altunitsType:
+    type: string
+  depthdnType:
+    type: string
+  depthduType:
+    type: string
+  enttyplType:
+    type: string
+  enttypdType:
+    type: string
+  enttypdsType:
+    type: string
+  attrlablType:
+    type: string
+  attrdefType:
+    type: string
+  attrdefsType:
+    type: string
+  edomvType:
+    type: string
+  edomvdType:
+    type: string
+  edomvdsType:
+    type: string
+  rdomminType:
+    type: string
+  rdommaxType:
+    type: string
+  attrunitType:
+    type: string
+  codesetnType:
+    type: string
+  codesetsType:
+    type: string
+  udomType:
+    type: string
+  begdateaType:
+    type: string
+  enddateaType:
+    type: string
+  attrvaType:
+    type: number
+  attrvaeType:
+    type: string
+  attrmfrqType:
+    type: string
+  eaoverType:
+    type: string
+  eadetcitType:
+    type: string
+  resdescType:
+    type: string
+  distliabType:
+    type: string
+  nondigType:
+    type: string
+  formnameType:
+    type: string
+  formvernType:
+    type: string
+  formverdType:
+    type: string
+  formspecType:
+    type: string
+  formcontType:
+    type: string
+  filedecType:
+    type: string
+  networkrType:
+    type: string
+  compressType:
+    type: string
+  dialtelType:
+    type: string
+  dialfileType:
+    type: string
+  accinstrType:
+    type: string
+  oncompType:
+    type: string
+  offmediaType:
+    type: string
+  recdenuType:
+    type: string
+  recfmtType:
+    type: string
+  compatType:
+    type: string
+  feesType:
+    type: string
+  orderingType:
+    type: string
+  turnarndType:
+    type: string
+  customType:
+    type: string
+  techpreqType:
+    type: string
+  metdType:
+    type: string
+  metrdType:
+    type: string
+  metfrdType:
+    type: string
+  metstdnType:
+    type: string
+  metstdvType:
+    type: string
+  metacType:
+    type: string
+  metucType:
+    type: string
+  metscsType:
+    type: string
+  metscType:
+    type: string
+  metshdType:
+    type: string
+  metprofType:
+    type: string
+  onlink:
+    type: string
+  originType:
+    type: string
+  pubdateType:
+    type: string
+  pubtimeType:
+    type: string
+  titleType:
+    type: string
+  editionType:
+    type: string
+  geoformType:
+    type: string
+  sernameType:
+    type: string
+  issueType:
+    type: string
+  pubplaceType:
+    type: string
+  publishType:
+    type: string
+  othercitType:
+    type: string
+  onlinkType:
+    type: string
+  caldateType:
+    type: string
+  timeType:
+    type: string
+  begdateType:
+    type: string
+  begtimeType:
+    type: string
+  enddateType:
+    type: string
+  endtimeType:
+    type: string
+  cntperType:
+    type: string
+  cntorgType:
+    type: string
+  cntposType:
+    type: string
+  addrtypeType:
+    type: string
+  addressType:
+    type: string
+  cityType:
+    type: string
+  stateType:
+    type: string
+  postalType:
+    type: string
+  countryType:
+    type: string
+  cntvoiceType:
+    type: string
+  cnttddType:
+    type: string
+  cntfaxType:
+    type: string
+  cntemailType:
+    type: string
+  hoursType:
+    type: string
+  cntinstType:
+    type: string
+  progressType:
+    enum:
+      - Complete
+      - In work
+      - Planned
+  directType:
+    enum:
+      - Point
+      - Vector
+      - Raster
+  sdtstypeType:
+    enum:
+      - Point
+      - Entity point
+      - Label point
+      - Area point
+      - 'Node, planar graph'
+      - 'Node, network'
+      - String
+      - Link
+      - Complete chain
+      - Area chain
+      - 'Network chain, planar graph'
+      - 'Network chain, nonplanar graph'
+      - 'Circular arc, three point center'
+      - Elliptical arc
+      - Uniform B-spline
+      - Piecewise Bezier
+      - Ring with mixed composition
+      - Ring composed of strings
+      - Ring composed of chains
+      - Ring composed of arcs
+      - G-polygon
+      - GT-polygon composed of rings
+      - GT-polygon composed of chains
+      - Universe polygon composed of rings
+      - Universe polygon composed of chains
+      - Void polygon composed of rings
+      - Void polygon composed of chains
+  vpftypeType:
+    enum:
+      - Node
+      - Edge
+      - Face
+      - Text
+  rasttypeType:
+    enum:
+      - Point
+      - Pixel
+      - Grid Cell
+      - Voxel
+  geogunitType:
+    enum:
+      - Decimal degrees
+      - Decimal minutes
+      - Decimal seconds
+      - Degrees and decimal minutes
+      - 'Degrees, minutes, and decimal seconds'
+      - Radians
+      - Grads
+  gridsysnType:
+    enum:
+      - Universal Transverse Mercator
+      - Universal Polar Stereographic
+      - State Plane Coordinate System 1927
+      - State Plane Coordinate System 1983
+      - ARC Coordinate System
+      - other grid system
+  upszoneType:
+    enum:
+      - A
+      - B
+      - 'Y'
+      - Z
+  planceType:
+    enum:
+      - coordinate pair
+      - distance and bearing
+      - row and column
+  bearunitType:
+    enum:
+      - Decimal degrees
+      - Decimal minutes
+      - Decimal seconds
+      - Degrees and decimal minutes
+      - 'Degrees, minutes, and decimal seconds'
+      - Radians
+      - Grads
+  bearrefdType:
+    enum:
+      - North
+      - South
+  bearrefmType:
+    enum:
+      - Assumed
+      - Grid
+      - Magnetic
+      - Astronomic
+      - Geodetic
+  altencType:
+    enum:
+      - Explicit elevation coordinate included with horizontal coordinates
+      - Implicit coordinate
+      - Attribute values
+  depthemType:
+    enum:
+      - Explicit depth coordinate included with horizontal coordinates
+      - Implicit coordinate
+      - Attribute values
+  parityType:
+    enum:
+      - None
+      - Odd
+      - Even
+      - Mark
+      - Space
+  mettcType:
+    enum:
+      - local time
+      - local time with time differential factor
+      - universal time
+  FGDCdate:
+    pattern: "^(cd\\d{5,}|(cc\\d{5,}|(bc\\d{4}(\\d{2}(\\d{2})?)?|\\d{4}(\\d{2}(\\d{2})?)?)))$"
+    type: string
+  FGDCtime:
+    pattern: "^(\\d{2}(\\d{2}(\\d{2,})?)?Z|(\\d{2}(\\d{2}(\\d{2,})?)?[+\\-]\\d{4}|\\d{2}(\\d{2}(\\d{2,})?)?))$"
+    type: string
+  FGDCstring:
+    pattern: "^\\s*\\S(.|\\n|\\r)*$"
+    type: string
+  FGDClatitude:
+    minimum: -90
+    exclusiveMinimum: false
+    maximum: 90
+    exclusiveMaximum: false
+    type: number
+  FGDClongitude:
+    minimum: -180
+    exclusiveMinimum: false
+    maximum: 180
+    exclusiveMaximum: false
+    type: number
+  westbcType:
+    maximum: 180
+    exclusiveMaximum: true
+    type: string
+  gringlonType:
+    maximum: 180
+    exclusiveMaximum: true
+    type: string
+  srcscaleType:
+    minimum: 1
+    exclusiveMinimum: true
+    type: integer
+  ptvctcntType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: integer
+  vpflevelType:
+    minimum: 0
+    exclusiveMinimum: false
+    maximum: 3
+    exclusiveMaximum: false
+    type: integer
+  latresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  longresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  longcmType:
+    maximum: 180
+    exclusiveMaximum: true
+    type: string
+  sfequatType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  heightptType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  longpcType:
+    maximum: 180
+    exclusiveMaximum: true
+    type: string
+  sfctrlinType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  azimanglType:
+    minimum: 0
+    exclusiveMinimum: false
+    maximum: 360
+    exclusiveMaximum: true
+    type: number
+  azimptlType:
+    maximum: 180
+    exclusiveMaximum: true
+    type: string
+  obqllongType:
+    maximum: 180
+    exclusiveMaximum: true
+    type: string
+  svlongType:
+    maximum: 180
+    exclusiveMaximum: true
+    type: string
+  sfprjorgType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  sfctrmerType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  spcszoneType:
+    pattern: "^\\d{4}$"
+    type: string
+  arczoneType:
+    minimum: 1
+    exclusiveMinimum: false
+    maximum: 18
+    exclusiveMaximum: false
+    type: integer
+  absresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  ordresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  distresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  bearresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  semiaxisType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  denflatType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  altresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  depthresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  attrmresType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  transizeType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  bpsType:
+    minimum: 110
+    exclusiveMinimum: false
+    type: integer
+  numdataType:
+    minimum: 7
+    exclusiveMinimum: false
+    maximum: 8
+    exclusiveMaximum: false
+    type: integer
+  numstopType:
+    minimum: 1
+    exclusiveMinimum: false
+    maximum: 2
+    exclusiveMaximum: false
+    type: integer
+  recdenType:
+    minimum: 0
+    exclusiveMinimum: true
+    type: number
+  metadataType:
+    required:
+      - idinfo
+      - metainfo
+    type: object
+    properties:
+      idinfo:
+        $ref: '#/definitions/idinfoType'
+      dataqual:
+        $ref: '#/definitions/dataqualType'
+      spdoinfo:
+        $ref: '#/definitions/spdoinfoType'
+      spref:
+        $ref: '#/definitions/sprefType'
+      eainfo:
+        $ref: '#/definitions/eainfoType'
+      distinfo:
+        type: array
+        items:
+          $ref: '#/definitions/distinfoType'
+        minItems: 0
+      metainfo:
+        $ref: '#/definitions/metainfoType'
+  idinfoType:
+    required:
+      - citation
+      - descript
+      - timeperd
+      - status
+      - spdom
+      - keywords
+      - accconst
+      - useconst
+    type: object
+    properties:
+      citation:
+        $ref: '#/definitions/citationType'
+      descript:
+        $ref: '#/definitions/descriptType'
+      timeperd:
+        $ref: '#/definitions/timeperdType'
+      status:
+        $ref: '#/definitions/statusType'
+      spdom:
+        $ref: '#/definitions/spdomType'
+      keywords:
+        $ref: '#/definitions/keywordsType'
+      accconst:
+        $ref: '#/definitions/accconstType'
+      useconst:
+        $ref: '#/definitions/useconstType'
+      ptcontac:
+        $ref: '#/definitions/ptcontacType'
+      browse:
+        type: array
+        items:
+          $ref: '#/definitions/browseType'
+        minItems: 0
+      datacred:
+        $ref: '#/definitions/datacredType'
+      secinfo:
+        $ref: '#/definitions/secinfoType'
+      native:
+        $ref: '#/definitions/nativeType'
+      crossref:
+        type: array
+        items:
+          $ref: '#/definitions/crossrefType'
+        minItems: 0
+  citationType:
+    required:
+      - citeinfo
+    type: object
+    properties:
+      citeinfo:
+        $ref: '#/definitions/citeinfoType'
+  descriptType:
+    required:
+      - abstract
+      - purpose
+    type: object
+    properties:
+      abstract:
+        $ref: '#/definitions/abstractType'
+      purpose:
+        $ref: '#/definitions/purposeType'
+      supplinf:
+        $ref: '#/definitions/supplinfType'
+  timeperdType:
+    required:
+      - timeinfo
+      - current
+    type: object
+    properties:
+      timeinfo:
+        type: timeinfoType
+      current:
+        $ref: '#/definitions/currentType'
+  statusType:
+    required:
+      - progress
+      - update
+    type: object
+    properties:
+      progress:
+        $ref: '#/definitions/progressType'
+      update:
+        $ref: '#/definitions/updateType'
+  spdomType:
+    required:
+      - bounding
+    type: object
+    properties:
+      bounding:
+        $ref: '#/definitions/boundingType'
+      dsgpoly:
+        type: array
+        items:
+          $ref: '#/definitions/dsgpolyType'
+        minItems: 0
+  boundingType:
+    required:
+      - westbc
+      - eastbc
+      - northbc
+      - southbc
+    type: object
+    properties:
+      westbc:
+        $ref: '#/definitions/westbcType'
+      eastbc:
+        $ref: '#/definitions/eastbcType'
+      northbc:
+        $ref: '#/definitions/northbcType'
+      southbc:
+        $ref: '#/definitions/southbcType'
+  dsgpolyType:
+    required:
+      - dsgpolyo
+    type: object
+    properties:
+      dsgpolyo:
+        type: dsgpolyoType
+      dsgpolyx:
+        type: array
+        items:
+          type: dsgpolyxType
+        minItems: 0
+  grngpoinType:
+    required:
+      - gringlat
+      - gringlon
+    type: object
+    properties:
+      gringlat:
+        $ref: '#/definitions/gringlatType'
+      gringlon:
+        $ref: '#/definitions/gringlonType'
+  keywordsType:
+    required:
+      - theme
+    type: object
+    properties:
+      theme:
+        type: array
+        items:
+          $ref: '#/definitions/themeType'
+        minItems: 1
+      place:
+        type: array
+        items:
+          $ref: '#/definitions/placeType'
+        minItems: 0
+      stratum:
+        type: array
+        items:
+          $ref: '#/definitions/stratumType'
+        minItems: 0
+      temporal:
+        type: array
+        items:
+          $ref: '#/definitions/temporalType'
+        minItems: 0
+  themeType:
+    required:
+      - themekt
+      - themekey
+    type: object
+    properties:
+      themekt:
+        $ref: '#/definitions/themektType'
+      themekey:
+        type: array
+        items:
+          $ref: '#/definitions/themekeyType'
+        minItems: 1
+  placeType:
+    required:
+      - placekt
+      - placekey
+    type: object
+    properties:
+      placekt:
+        $ref: '#/definitions/placektType'
+      placekey:
+        type: array
+        items:
+          $ref: '#/definitions/placekeyType'
+        minItems: 1
+  stratumType:
+    required:
+      - stratkt
+      - stratkey
+    type: object
+    properties:
+      stratkt:
+        $ref: '#/definitions/stratktType'
+      stratkey:
+        type: array
+        items:
+          $ref: '#/definitions/stratkeyType'
+        minItems: 1
+  temporalType:
+    required:
+      - tempkt
+      - tempkey
+    type: object
+    properties:
+      tempkt:
+        $ref: '#/definitions/tempktType'
+      tempkey:
+        type: array
+        items:
+          $ref: '#/definitions/tempkeyType'
+        minItems: 1
+  ptcontacType:
+    required:
+      - cntinfo
+    type: object
+    properties:
+      cntinfo:
+        type: cntinfoType
+  browseType:
+    required:
+      - browsen
+      - browsed
+      - browset
+    type: object
+    properties:
+      browsen:
+        $ref: '#/definitions/browsenType'
+      browsed:
+        $ref: '#/definitions/browsedType'
+      browset:
+        $ref: '#/definitions/browsetType'
+  secinfoType:
+    required:
+      - secsys
+      - secclass
+      - sechandl
+    type: object
+    properties:
+      secsys:
+        $ref: '#/definitions/secsysType'
+      secclass:
+        $ref: '#/definitions/secclassType'
+      sechandl:
+        $ref: '#/definitions/sechandlType'
+  crossrefType:
+    required:
+      - citeinfo
+    type: object
+    properties:
+      citeinfo:
+        $ref: '#/definitions/citeinfoType'
+  dataqualType:
+    type: object
+    properties:
+      attracc:
+        $ref: '#/definitions/attraccType'
+      logic:
+        $ref: '#/definitions/logicType'
+      complete:
+        $ref: '#/definitions/completeType'
+      posacc:
+        $ref: '#/definitions/posaccType'
+      lineage:
+        $ref: '#/definitions/lineageType'
+      cloud:
+        $ref: '#/definitions/cloudType'
+    required:
+      - logic
+      - complete
+      - lineage
+  attraccType:
+    required:
+      - attraccr
+    type: object
+    properties:
+      attraccr:
+        $ref: '#/definitions/attraccrType'
+      qattracc:
+        type: array
+        items:
+          $ref: '#/definitions/qattraccType'
+        minItems: 0
+  qattraccType:
+    required:
+      - attraccv
+      - attracce
+    type: object
+    properties:
+      attraccv:
+        $ref: '#/definitions/attraccvType'
+      attracce:
+        $ref: '#/definitions/attracceType'
+  posaccType:
+    type: object
+    properties:
+      horizpa:
+        $ref: '#/definitions/horizpaType'
+      vertacc:
+        $ref: '#/definitions/vertaccType'
+  horizpaType:
+    required:
+      - horizpar
+    type: object
+    properties:
+      horizpar:
+        $ref: '#/definitions/horizparType'
+      qhorizpa:
+        type: array
+        items:
+          $ref: '#/definitions/qhorizpaType'
+        minItems: 0
+  qhorizpaType:
+    required:
+      - horizpav
+      - horizpae
+    type: object
+    properties:
+      horizpav:
+        $ref: '#/definitions/horizpavType'
+      horizpae:
+        $ref: '#/definitions/horizpaeType'
+  vertaccType:
+    required:
+      - vertaccr
+    type: object
+    properties:
+      vertaccr:
+        $ref: '#/definitions/vertaccrType'
+      qvertpa:
+        type: array
+        items:
+          $ref: '#/definitions/qvertpaType'
+        minItems: 0
+  qvertpaType:
+    required:
+      - vertaccv
+      - vertacce
+    type: object
+    properties:
+      vertaccv:
+        $ref: '#/definitions/vertaccvType'
+      vertacce:
+        $ref: '#/definitions/vertacceType'
+  lineageType:
+    type: object
+    properties:
+      srcinfo:
+        type: array
+        items:
+          $ref: '#/definitions/srcinfoType'
+        minItems: 0
+      procstep:
+        type: array
+        items:
+          $ref: '#/definitions/procstepType'
+        minItems: 1
+    required:
+      - procstep
+  srcinfoType:
+    required:
+      - srccite
+      - typesrc
+      - srctime
+      - srccitea
+      - srccontr
+    type: object
+    properties:
+      srccite:
+        $ref: '#/definitions/srcciteType'
+      srcscale:
+        $ref: '#/definitions/srcscaleType'
+      typesrc:
+        $ref: '#/definitions/typesrcType'
+      srctime:
+        $ref: '#/definitions/srctimeType'
+      srccitea:
+        type: srcciteaType
+      srccontr:
+        $ref: '#/definitions/srccontrType'
+  srcciteType:
+    required:
+      - citeinfo
+    type: object
+    properties:
+      citeinfo:
+        $ref: '#/definitions/citeinfoType'
+  srctimeType:
+    required:
+      - timeinfo
+      - srccurr
+    type: object
+    properties:
+      timeinfo:
+        type: timeinfoType
+      srccurr:
+        $ref: '#/definitions/srccurrType'
+  procstepType:
+    required:
+      - procdesc
+      - procdate
+    type: object
+    properties:
+      procdesc:
+        $ref: '#/definitions/procdescType'
+      srcused:
+        type: array
+        items:
+          type: srcciteaType
+        minItems: 0
+      procdate:
+        $ref: '#/definitions/procdateType'
+      proctime:
+        $ref: '#/definitions/proctimeType'
+      srcprod:
+        type: array
+        items:
+          type: srcciteaType
+        minItems: 0
+      proccont:
+        $ref: '#/definitions/proccontType'
+  proccontType:
+    required:
+      - cntinfo
+    type: object
+    properties:
+      cntinfo:
+        type: cntinfoType
+  spdoinfoType:
+    type: object
+    properties:
+      indspref:
+        $ref: '#/definitions/indsprefType'
+  sdtstermType:
+    required:
+      - sdtstype
+    type: object
+    properties:
+      sdtstype:
+        $ref: '#/definitions/sdtstypeType'
+      ptvctcnt:
+        $ref: '#/definitions/ptvctcntType'
+  vpftermType:
+    required:
+      - vpflevel
+      - vpfinfo
+    type: object
+    properties:
+      vpflevel:
+        $ref: '#/definitions/vpflevelType'
+      vpfinfo:
+        type: array
+        items:
+          $ref: '#/definitions/vpfinfoType'
+        minItems: 1
+  vpfinfoType:
+    required:
+      - vpftype
+    type: object
+    properties:
+      vpftype:
+        $ref: '#/definitions/vpftypeType'
+      ptvctcnt:
+        $ref: '#/definitions/ptvctcntType'
+  rastinfoType:
+    required:
+      - rasttype
+    type: object
+    properties:
+      rasttype:
+        $ref: '#/definitions/rasttypeType'
+  sprefType:
+    type: object
+    properties:
+      horizsys:
+        type: horizsysType
+      vertdef:
+        $ref: '#/definitions/vertdefType'
+  geographType:
+    required:
+      - latres
+      - longres
+      - geogunit
+    type: object
+    properties:
+      latres:
+        $ref: '#/definitions/latresType'
+      longres:
+        $ref: '#/definitions/longresType'
+      geogunit:
+        $ref: '#/definitions/geogunitType'
+  albersType:
+    required:
+      - stdparll
+      - longcm
+      - latprjo
+      - feast
+      - fnorth
+    type: object
+    properties:
+      stdparll:
+        maxItems: 2
+        type: array
+        items:
+          $ref: '#/definitions/stdparllType'
+        minItems: 1
+      longcm:
+        $ref: '#/definitions/longcmType'
+      latprjo:
+        $ref: '#/definitions/latprjoType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  azimequiType:
+    required:
+      - longcm
+      - latprjo
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longcm:
+        $ref: '#/definitions/longcmType'
+      latprjo:
+        $ref: '#/definitions/latprjoType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  equiconType:
+    required:
+      - stdparll
+      - longcm
+      - latprjo
+      - feast
+      - fnorth
+    type: object
+    properties:
+      stdparll:
+        maxItems: 2
+        type: array
+        items:
+          $ref: '#/definitions/stdparllType'
+        minItems: 1
+      longcm:
+        $ref: '#/definitions/longcmType'
+      latprjo:
+        $ref: '#/definitions/latprjoType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  equirectType:
+    required:
+      - stdparll
+      - longcm
+      - feast
+      - fnorth
+    type: object
+    properties:
+      stdparll:
+        $ref: '#/definitions/stdparllType'
+      longcm:
+        $ref: '#/definitions/longcmType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  gvnspType:
+    required:
+      - heightpt
+      - longpc
+      - latprjc
+      - feast
+      - fnorth
+    type: object
+    properties:
+      heightpt:
+        $ref: '#/definitions/heightptType'
+      longpc:
+        $ref: '#/definitions/longpcType'
+      latprjc:
+        $ref: '#/definitions/latprjcType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  gnomonicType:
+    required:
+      - longpc
+      - latprjc
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longpc:
+        $ref: '#/definitions/longpcType'
+      latprjc:
+        $ref: '#/definitions/latprjcType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  lambertaType:
+    required:
+      - longpc
+      - latprjc
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longpc:
+        $ref: '#/definitions/longpcType'
+      latprjc:
+        $ref: '#/definitions/latprjcType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  lambertcType:
+    required:
+      - stdparll
+      - longcm
+      - latprjo
+      - feast
+      - fnorth
+    type: object
+    properties:
+      stdparll:
+        maxItems: 2
+        type: array
+        items:
+          $ref: '#/definitions/stdparllType'
+        minItems: 1
+      longcm:
+        $ref: '#/definitions/longcmType'
+      latprjo:
+        $ref: '#/definitions/latprjoType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  modsakType:
+    required:
+      - feast
+      - fnorth
+    type: object
+    properties:
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  millerType:
+    required:
+      - longcm
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longcm:
+        $ref: '#/definitions/longcmType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  orthogrType:
+    required:
+      - longpc
+      - latprjc
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longpc:
+        $ref: '#/definitions/longpcType'
+      latprjc:
+        $ref: '#/definitions/latprjcType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  polyconType:
+    required:
+      - longcm
+      - latprjo
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longcm:
+        $ref: '#/definitions/longcmType'
+      latprjo:
+        $ref: '#/definitions/latprjoType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  robinsonType:
+    required:
+      - longpc
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longpc:
+        $ref: '#/definitions/longpcType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  sinusoidType:
+    required:
+      - longcm
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longcm:
+        $ref: '#/definitions/longcmType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  spaceobqType:
+    required:
+      - landsat
+      - pathnum
+      - feast
+      - fnorth
+    type: object
+    properties:
+      landsat:
+        $ref: '#/definitions/landsatType'
+      pathnum:
+        $ref: '#/definitions/pathnumType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  stereoType:
+    required:
+      - longpc
+      - latprjc
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longpc:
+        $ref: '#/definitions/longpcType'
+      latprjc:
+        $ref: '#/definitions/latprjcType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  transmerType:
+    required:
+      - sfctrmer
+      - longcm
+      - latprjo
+      - feast
+      - fnorth
+    type: object
+    properties:
+      sfctrmer:
+        $ref: '#/definitions/sfctrmerType'
+      longcm:
+        $ref: '#/definitions/longcmType'
+      latprjo:
+        $ref: '#/definitions/latprjoType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  vdgrinType:
+    required:
+      - longcm
+      - feast
+      - fnorth
+    type: object
+    properties:
+      longcm:
+        $ref: '#/definitions/longcmType'
+      feast:
+        $ref: '#/definitions/feastType'
+      fnorth:
+        $ref: '#/definitions/fnorthType'
+  obqlazimType:
+    required:
+      - azimangl
+      - azimptl
+    type: object
+    properties:
+      azimangl:
+        $ref: '#/definitions/azimanglType'
+      azimptl:
+        $ref: '#/definitions/azimptlType'
+  obqlptType:
+    required:
+      - obqllat
+      - obqllong
+    type: object
+    properties:
+      obqllat:
+        $ref: '#/definitions/obqllatType'
+      obqllong:
+        $ref: '#/definitions/obqllongType'
+  utmType:
+    required:
+      - utmzone
+      - transmer
+    type: object
+    properties:
+      utmzone:
+        $ref: '#/definitions/utmzoneType'
+      transmer:
+        $ref: '#/definitions/transmerType'
+  upsType:
+    required:
+      - upszone
+      - polarst
+    type: object
+    properties:
+      upszone:
+        $ref: '#/definitions/upszoneType'
+      polarst:
+        type: polarstType
+  localpType:
+    required:
+      - localpd
+      - localpgi
+    type: object
+    properties:
+      localpd:
+        $ref: '#/definitions/localpdType'
+      localpgi:
+        $ref: '#/definitions/localpgiType'
+  coordrepType:
+    required:
+      - absres
+      - ordres
+    type: object
+    properties:
+      absres:
+        $ref: '#/definitions/absresType'
+      ordres:
+        $ref: '#/definitions/ordresType'
+  distbrepType:
+    required:
+      - distres
+      - bearres
+      - bearunit
+      - bearrefd
+      - bearrefm
+    type: object
+    properties:
+      distres:
+        $ref: '#/definitions/distresType'
+      bearres:
+        $ref: '#/definitions/bearresType'
+      bearunit:
+        $ref: '#/definitions/bearunitType'
+      bearrefd:
+        $ref: '#/definitions/bearrefdType'
+      bearrefm:
+        $ref: '#/definitions/bearrefmType'
+  localType:
+    required:
+      - localdes
+      - localgeo
+    type: object
+    properties:
+      localdes:
+        $ref: '#/definitions/localdesType'
+      localgeo:
+        $ref: '#/definitions/localgeoType'
+  geodeticType:
+    type: object
+    properties:
+      horizdn:
+        $ref: '#/definitions/horizdnType'
+      ellips:
+        $ref: '#/definitions/ellipsType'
+      semiaxis:
+        $ref: '#/definitions/semiaxisType'
+      denflat:
+        $ref: '#/definitions/denflatType'
+    required:
+      - ellips
+      - semiaxis
+      - denflat
+  vertdefType:
+    type: object
+    properties:
+      altsys:
+        $ref: '#/definitions/altsysType'
+      depthsys:
+        $ref: '#/definitions/depthsysType'
+  altsysType:
+    required:
+      - altdatum
+      - altres
+      - altunits
+      - altenc
+    type: object
+    properties:
+      altdatum:
+        $ref: '#/definitions/altdatumType'
+      altres:
+        type: array
+        items:
+          $ref: '#/definitions/altresType'
+        minItems: 1
+      altunits:
+        $ref: '#/definitions/altunitsType'
+      altenc:
+        $ref: '#/definitions/altencType'
+  depthsysType:
+    required:
+      - depthdn
+      - depthres
+      - depthdu
+      - depthem
+    type: object
+    properties:
+      depthdn:
+        $ref: '#/definitions/depthdnType'
+      depthres:
+        type: array
+        items:
+          $ref: '#/definitions/depthresType'
+        minItems: 1
+      depthdu:
+        $ref: '#/definitions/depthduType'
+      depthem:
+        $ref: '#/definitions/depthemType'
+  eainfoTypeCHOICE0:
+    required:
+      - detailed
+    type: object
+    properties:
+      detailed:
+        type: array
+        items:
+          $ref: '#/definitions/detailedType'
+        minItems: 1
+      overview:
+        type: array
+        items:
+          $ref: '#/definitions/overviewType'
+        minItems: 0
+  detailedType:
+    required:
+      - enttyp
+    type: object
+    properties:
+      enttyp:
+        $ref: '#/definitions/enttypType'
+      attr:
+        type: array
+        items:
+          $ref: '#/definitions/attrType'
+        minItems: 0
+  enttypType:
+    required:
+      - enttypl
+      - enttypd
+      - enttypds
+    type: object
+    properties:
+      enttypl:
+        $ref: '#/definitions/enttyplType'
+      enttypd:
+        $ref: '#/definitions/enttypdType'
+      enttypds:
+        $ref: '#/definitions/enttypdsType'
+  attrType:
+    required:
+      - attrlabl
+      - attrdef
+      - attrdefs
+      - attrdomv
+    type: object
+    properties:
+      attrlabl:
+        $ref: '#/definitions/attrlablType'
+      attrdef:
+        $ref: '#/definitions/attrdefType'
+      attrdefs:
+        $ref: '#/definitions/attrdefsType'
+      attrdomv:
+        type: array
+        items:
+          type: attrdomvType
+        minItems: 1
+      attrvai:
+        $ref: '#/definitions/attrvaiType'
+      attrmfrq:
+        $ref: '#/definitions/attrmfrqType'
+  edomType:
+    required:
+      - edomv
+      - edomvd
+      - edomvds
+    type: object
+    properties:
+      edomv:
+        $ref: '#/definitions/edomvType'
+      edomvd:
+        $ref: '#/definitions/edomvdType'
+      edomvds:
+        $ref: '#/definitions/edomvdsType'
+      attr:
+        type: array
+        items:
+          $ref: '#/definitions/attrType'
+        minItems: 0
+  rdomType:
+    required:
+      - rdommin
+      - rdommax
+    type: object
+    properties:
+      rdommin:
+        $ref: '#/definitions/rdomminType'
+      rdommax:
+        $ref: '#/definitions/rdommaxType'
+      attrunit:
+        $ref: '#/definitions/attrunitType'
+      attrmres:
+        $ref: '#/definitions/attrmresType'
+      attr:
+        type: array
+        items:
+          $ref: '#/definitions/attrType'
+        minItems: 0
+  codesetdType:
+    required:
+      - codesetn
+      - codesets
+    type: object
+    properties:
+      codesetn:
+        $ref: '#/definitions/codesetnType'
+      codesets:
+        $ref: '#/definitions/codesetsType'
+  attrvaiType:
+    required:
+      - attrva
+      - attrvae
+    type: object
+    properties:
+      attrva:
+        $ref: '#/definitions/attrvaType'
+      attrvae:
+        $ref: '#/definitions/attrvaeType'
+  overviewType:
+    required:
+      - eaover
+      - eadetcit
+    type: object
+    properties:
+      eaover:
+        $ref: '#/definitions/eaoverType'
+      eadetcit:
+        type: array
+        items:
+          $ref: '#/definitions/eadetcitType'
+        minItems: 1
+  distinfoType:
+    required:
+      - distrib
+    type: object
+    properties:
+      distrib:
+        $ref: '#/definitions/distribType'
+  distribType:
+    required:
+      - cntinfo
+    type: object
+    properties:
+      cntinfo:
+        type: cntinfoType
+  digformType:
+    required:
+      - digtinfo
+      - digtopt
+    type: object
+    properties:
+      digtinfo:
+        $ref: '#/definitions/digtinfoType'
+      digtopt:
+        type: digtoptType
+  digtinfoType:
+    required:
+      - formname
+    type: object
+    properties:
+      formname:
+        $ref: '#/definitions/formnameType'
+      formcont:
+        $ref: '#/definitions/formcontType'
+      filedec:
+        $ref: '#/definitions/filedecType'
+      transize:
+        $ref: '#/definitions/transizeType'
+  onlinoptType:
+    required:
+      - computer
+    type: object
+    properties:
+      computer:
+        type: array
+        items:
+          type: computerType
+        minItems: 1
+      accinstr:
+        $ref: '#/definitions/accinstrType'
+      oncomp:
+        $ref: '#/definitions/oncompType'
+  networkaType:
+    required:
+      - networkr
+    type: object
+    properties:
+      networkr:
+        type: array
+        items:
+          $ref: '#/definitions/networkrType'
+        minItems: 1
+  dialinstType:
+    required:
+      - lowbps
+      - numdata
+      - numstop
+      - parity
+      - dialtel
+      - dialfile
+    type: object
+    properties:
+      lowbps:
+        type: lowbpsType
+      highbps:
+        type: highbpsType
+      numdata:
+        $ref: '#/definitions/numdataType'
+      numstop:
+        $ref: '#/definitions/numstopType'
+      parity:
+        $ref: '#/definitions/parityType'
+      compress:
+        $ref: '#/definitions/compressType'
+      dialtel:
+        type: array
+        items:
+          $ref: '#/definitions/dialtelType'
+        minItems: 1
+      dialfile:
+        type: array
+        items:
+          $ref: '#/definitions/dialfileType'
+        minItems: 1
+  offoptnType:
+    required:
+      - offmedia
+      - recfmt
+    type: object
+    properties:
+      offmedia:
+        $ref: '#/definitions/offmediaType'
+      reccap:
+        $ref: '#/definitions/reccapType'
+      recfmt:
+        type: array
+        items:
+          $ref: '#/definitions/recfmtType'
+        minItems: 1
+      compat:
+        $ref: '#/definitions/compatType'
+  reccapType:
+    required:
+      - recden
+      - recdenu
+    type: object
+    properties:
+      recden:
+        type: array
+        items:
+          $ref: '#/definitions/recdenType'
+        minItems: 1
+      recdenu:
+        $ref: '#/definitions/recdenuType'
+  availablType:
+    required:
+      - timeinfo
+    type: object
+    properties:
+      timeinfo:
+        type: timeinfoType
+  metainfoType:
+    required:
+      - metd
+      - metc
+      - metstdn
+      - metstdv
+    type: object
+    properties:
+      metd:
+        $ref: '#/definitions/metdType'
+      metrd:
+        $ref: '#/definitions/metrdType'
+      metfrd:
+        $ref: '#/definitions/metfrdType'
+      metc:
+        $ref: '#/definitions/metcType'
+      metstdn:
+        $ref: '#/definitions/metstdnType'
+      metstdv:
+        $ref: '#/definitions/metstdvType'
+      mettc:
+        $ref: '#/definitions/mettcType'
+      metac:
+        $ref: '#/definitions/metacType'
+      metuc:
+        $ref: '#/definitions/metucType'
+      metsi:
+        $ref: '#/definitions/metsiType'
+      metextns:
+        type: array
+        items:
+          $ref: '#/definitions/metextnsType'
+        minItems: 0
+  metcType:
+    required:
+      - cntinfo
+    type: object
+    properties:
+      cntinfo:
+        type: cntinfoType
+  metsiType:
+    required:
+      - metscs
+      - metsc
+      - metshd
+    type: object
+    properties:
+      metscs:
+        $ref: '#/definitions/metscsType'
+      metsc:
+        $ref: '#/definitions/metscType'
+      metshd:
+        $ref: '#/definitions/metshdType'
+  metextnsType:
+    type: object
+    properties:
+      onlink:
+        type: array
+        items:
+          $ref: '#/definitions/onlink'
+        minItems: 0
+      metprof:
+        $ref: '#/definitions/metprofType'
+  citeinfoType:
+    required:
+      - origin
+      - pubdate
+      - title
+    type: object
+    properties:
+      origin:
+        type: array
+        items:
+          $ref: '#/definitions/originType'
+        minItems: 1
+      pubdate:
+        $ref: '#/definitions/pubdateType'
+      pubtime:
+        $ref: '#/definitions/pubtimeType'
+      title:
+        $ref: '#/definitions/titleType'
+      edition:
+        $ref: '#/definitions/editionType'
+      geoform:
+        $ref: '#/definitions/geoformType'
+      serinfo:
+        $ref: '#/definitions/serinfoType'
+      pubinfo:
+        $ref: '#/definitions/pubinfoType'
+      othercit:
+        $ref: '#/definitions/othercitType'
+      onlink:
+        type: array
+        items:
+          $ref: '#/definitions/onlinkType'
+        minItems: 0
+      lworkcit:
+        $ref: '#/definitions/lworkcitType'
+  serinfoType:
+    required:
+      - sername
+      - issue
+    type: object
+    properties:
+      sername:
+        $ref: '#/definitions/sernameType'
+      issue:
+        $ref: '#/definitions/issueType'
+  pubinfoType:
+    required:
+      - pubplace
+      - publish
+    type: object
+    properties:
+      pubplace:
+        $ref: '#/definitions/pubplaceType'
+      publish:
+        $ref: '#/definitions/publishType'
+  lworkcitType:
+    required:
+      - citeinfo
+    type: object
+    properties:
+      citeinfo:
+        $ref: '#/definitions/citeinfoType'
+  sngdateType:
+    required:
+      - caldate
+    type: object
+    properties:
+      caldate:
+        $ref: '#/definitions/caldateType'
+      time:
+        $ref: '#/definitions/timeType'
+  mdattimType:
+    required:
+      - sngdate
+    type: object
+    properties:
+      sngdate:
+        type: array
+        items:
+          $ref: '#/definitions/sngdateType'
+        minItems: 2
+  rngdatesType:
+    required:
+      - begdate
+      - enddate
+    type: object
+    properties:
+      begdate:
+        $ref: '#/definitions/begdateType'
+      begtime:
+        $ref: '#/definitions/begtimeType'
+      enddate:
+        $ref: '#/definitions/enddateType'
+      endtime:
+        $ref: '#/definitions/endtimeType'
+  cntperpType:
+    required:
+      - cntper
+    type: object
+    properties:
+      cntper:
+        $ref: '#/definitions/cntperType'
+      cntorg:
+        $ref: '#/definitions/cntorgType'
+  cntorgpType:
+    required:
+      - cntorg
+    type: object
+    properties:
+      cntorg:
+        $ref: '#/definitions/cntorgType'
+      cntper:
+        $ref: '#/definitions/cntperType'
+  cntaddrType:
+    required:
+      - addrtype
+      - city
+      - state
+      - postal
+    type: object
+    properties:
+      addrtype:
+        $ref: '#/definitions/addrtypeType'
+      address:
+        type: array
+        items:
+          $ref: '#/definitions/addressType'
+        minItems: 0
+      city:
+        $ref: '#/definitions/cityType'
+      state:
+        $ref: '#/definitions/stateType'
+      postal:
+        $ref: '#/definitions/postalType'
+      country:
+        $ref: '#/definitions/countryType'
+  eainfoType:
+    anyOf:
+      - $ref: '#/definitions/eainfoTypeCHOICE0'
+$ref: '#/definitions/metadataType'

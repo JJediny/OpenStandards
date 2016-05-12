@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+   targetNamespace="http://www.fgdc.gov/framework/073004/cadastral"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:cad="http://www.fgdc.gov/framework/073004/cadastral"
+   xmlns:fw="http://www.fgdc.gov/framework/073004"
+   xmlns:gml="http://www.opengis.net/gml"
+   xmlns:gmlsf="http://www.opengis.net/gmlsf"
+   elementFormDefault="qualified"
+   version="073004">
+
+   <xs:annotation>
+      <xs:appinfo source="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd">
+         <gmlsf:ConformanceLevel>1</gmlsf:ConformanceLevel>
+         <gmlsf:GMLProfileSchema>http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd</gmlsf:GMLProfileSchema>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:import namespace="http://www.opengis.net/gml"
+       schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gmlsf"
+       schemaLocation="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd"/>
+   <xs:import namespace="http://www.fgdc.gov/framework/073004"
+       schemaLocation="Framework_GMLSF1.xsd"/>
+
+   <!-- ******************************************************************* -->
+   <!-- *  PARCEL SOURCE                                                  * -->
+   <!-- ******************************************************************* -->
+   <xs:complexType name="ParcelSourcePropertyType">
+      <xs:sequence>
+         <xs:element ref="cad:ParcelSource"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="ParcelSource">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="parcelId" type="fw:IdentifierPropertyType"/>
+            <xs:element name="sourceId" type="fw:IdentifierPropertyType"/>
+            <xs:element name="primary" type="xs:boolean"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   <!-- ******************************************************************* -->
+   <!-- *  PARCEL COLLECTION                                              * -->
+   <!-- ******************************************************************* -->
+   <xs:element name="ParcelCollection"
+            type="cad:ParcelCollectionType"
+            substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="ParcelCollectionType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="metadata" type="xs:anyURI"/>
+               <xs:element name="parcel" type="gml:ReferenceType"
+                           minOccurs="1" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">cad:Parcel/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <!-- ******************************************************************* -->
+   <!-- *  PARCEL COLLECTION                                              * -->
+   <!-- ******************************************************************* -->
+   <xs:element name="Parcel"
+            type="cad:ParcelType"
+            substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="ParcelType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="parcelPolygon"
+                           type="gml:SurfacePropertyType"/>
+               <xs:element name="parcelCentroid"
+                           type="gml:PointPropertyType"/>
+               <xs:element name="parcelIdentity"
+                           type="cad:ParcelSourcePropertyType"/>
+               <xs:element name="ownerType">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:enumeration value="tribalNation"/>
+                        <xs:enumeration value="federalGovernment"/>
+                        <xs:enumeration value="state"/>
+                        <xs:enumeration value="localGovernment"/>
+                        <xs:enumeration value="municipalGovernment"/>
+                        <xs:enumeration value="notForProfit"/>
+                        <xs:enumeration value="other"/>
+                        <xs:enumeration value="private"/>
+                        <xs:enumeration value="unknown"/>
+                     </xs:restriction>
+                   </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,203 @@
+{
+  "definitions": {
+    "ovalmitreorgXMLSchemaovalcommon5:DatatypeEnumeration": {
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:ItemIDPattern": {
+      "type": "integer"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:CheckEnumeration": {
+      "enum": [
+        "all",
+        "at least one",
+        "none exist",
+        "none satisfy",
+        "only one"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:ClassEnumeration": {
+      "enum": [
+        "compliance",
+        "inventory",
+        "miscellaneous",
+        "patch",
+        "vulnerability"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:SimpleDatatypeEnumeration": {
+      "enum": [
+        "binary",
+        "boolean",
+        "evr_string",
+        "fileset_revision",
+        "float",
+        "ios_version",
+        "int",
+        "ipv4_address",
+        "ipv6_address",
+        "string",
+        "version"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:ComplexDatatypeEnumeration": {
+      "enum": [
+        "record"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:ExistenceEnumeration": {
+      "enum": [
+        "all_exist",
+        "any_exist",
+        "at_least_one_exists",
+        "none_exist",
+        "only_one_exists"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:FamilyEnumeration": {
+      "enum": [
+        "android",
+        "asa",
+        "apple_ios",
+        "catos",
+        "ios",
+        "iosxe",
+        "junos",
+        "macos",
+        "pixos",
+        "undefined",
+        "unix",
+        "vmware_infrastructure",
+        "windows"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:MessageLevelEnumeration": {
+      "enum": [
+        "debug",
+        "error",
+        "fatal",
+        "info",
+        "warning"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:OperationEnumeration": {
+      "enum": [
+        "equals",
+        "not equal",
+        "case insensitive equals",
+        "case insensitive not equal",
+        "greater than",
+        "less than",
+        "greater than or equal",
+        "less than or equal",
+        "bitwise and",
+        "bitwise or",
+        "pattern match",
+        "subset of",
+        "superset of"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:OperatorEnumeration": {
+      "enum": [
+        "AND",
+        "ONE",
+        "OR",
+        "XOR"
+      ],
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:DefinitionIDPattern": {
+      "pattern": "^oval:[A-Za-z0-9_\\-\\.]+:def:[1-9][0-9]*$",
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:ObjectIDPattern": {
+      "pattern": "^oval:[A-Za-z0-9_\\-\\.]+:obj:[1-9][0-9]*$",
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:StateIDPattern": {
+      "pattern": "^oval:[A-Za-z0-9_\\-\\.]+:ste:[1-9][0-9]*$",
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:TestIDPattern": {
+      "pattern": "^oval:[A-Za-z0-9_\\-\\.]+:tst:[1-9][0-9]*$",
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:VariableIDPattern": {
+      "pattern": "^oval:[A-Za-z0-9_\\-\\.]+:var:[1-9][0-9]*$",
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:SchemaVersionPattern": {
+      "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?(:[0-9]+\\.[0-9]+(\\.[0-9]+)?)?$",
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:EmptyStringType": {
+      "maxLength": 0,
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:NonEmptyStringType": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:ElementMapType": {
+      "required": [
+        "test"
+      ],
+      "type": "object",
+      "properties": {
+        "test": {
+          "$ref": "#/definitions/ovalmitreorgXMLSchemaovalcommon5:ElementMapItemType"
+        },
+        "object": {
+          "$ref": "#/definitions/ovalmitreorgXMLSchemaovalcommon5:ElementMapItemType"
+        },
+        "state": {
+          "$ref": "#/definitions/ovalmitreorgXMLSchemaovalcommon5:ElementMapItemType"
+        },
+        "item": {
+          "$ref": "#/definitions/ovalmitreorgXMLSchemaovalcommon5:ElementMapItemType"
+        }
+      }
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:DeprecatedInfoType": {
+      "required": [
+        "version",
+        "reason"
+      ],
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "ovalmitreorgXMLSchemaovalcommon5:version"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "comment": {
+          "type": "string"
+        }
+      }
+    },
+    "ovalmitreorgXMLSchemaovalcommon5:ElementMapItemType": {
+      "properties": {
+        "target_namespace": {
+          "type": "string",
+          "format": "uri"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "required": [
+        "value"
+      ]
+    }
+  },
+  "$ref": "#/definitions/ovalmitreorgXMLSchemaovalcommon5:DeprecatedInfoType"
+}

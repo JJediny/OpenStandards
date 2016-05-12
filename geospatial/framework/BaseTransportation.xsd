@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+   targetNamespace="http://www.fgdc.gov/framework/073004/transportation"
+   xmlns:trans="http://www.fgdc.gov/framework/073004/transportation"
+   xmlns:fw="http://www.fgdc.gov/framework/073004"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:gml="http://www.opengis.net/gml"
+   xmlns:gmlsf="http://www.opengis.net/gmlsf"
+   elementFormDefault="qualified"
+   version="0.0.4">
+
+   <xs:annotation>
+      <xs:appinfo source="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd">
+         <gmlsf:ConformanceLevel>1</gmlsf:ConformanceLevel>
+         <gmlsf:GMLProfileSchema>http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd</gmlsf:GMLProfileSchema>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:import namespace="http://www.opengis.net/gml"
+       schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gmlsf"
+       schemaLocation="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd"/>
+   <xs:import namespace="http://www.fgdc.gov/framework/073004"
+       schemaLocation="Framework_GMLSF1.xsd"/>
+
+   <!-- ================================================================= -->
+   <!-- TRAN FEATURE                                                      -->
+   <!-- ================================================================= -->
+   <xs:element name="TranFeature"
+               type="trans:TranFeatureType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="TranFeatureType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="lastUpdateDate" type="dateTime"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <!-- ================================================================= -->
+   <!-- TRAN PATH                                                         -->
+   <!-- ================================================================= -->
+   <xs:element name="TranPath"
+               type="trans:TranPathType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="TranPathType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="tranFeature" type="gml:ReferenceType">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranFeature/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="geometry"
+                           type="gml:MultiCurvePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="routeNumber"
+                           type="xs:string"/>
+               <xs:element name="topology"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="to"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranPath/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="segment"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranSeg/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <!-- ================================================================= -->
+   <!-- TRAN SEG                                                          -->
+   <!-- ================================================================= -->
+   <xs:element name="TranSeg"
+               type="trans:TranSegType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="TranSegType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="tranFeature" type="gml:ReferenceType">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranFeature/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="status"
+                           type="xs:string"/>
+               <xs:element name="fieldMeasure"
+                           type="gml:MeasureType"/>
+               <xs:element name="length"
+                           type="gml:MeasureType"/>
+               <xs:element name="geometry"
+                           type="gml:CurvePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="topology"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="to"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranSeg/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="startPoint"
+                           type="gml:ReferenceType" minOccurs="0">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranPoint/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="endPoint"
+                           type="gml:ReferenceType" minOccurs="0">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranPoint/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <!-- ================================================================= -->
+   <!-- TRAN POINT                                                        -->
+   <!-- ================================================================= -->
+   <xs:element name="TranPoint"
+               type="trans:TranPointType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="TranPointType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="tranFeature" type="gml:ReferenceType">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranFeature/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="geometry"
+                           type="gml:PointPropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="topology"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="to"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:TranSeg/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+</xs:schema>

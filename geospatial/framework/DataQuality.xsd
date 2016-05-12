@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+   targetNamespace="http://www.fgdc.gov/framework/073004/dataQuality"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:fw="http://www.fgdc.gov/framework/073004"
+   xmlns:dq="http://www.fgdc.gov/framework/073004/dataQuality"
+   xmlns:gml="http://www.opengis.net/gml"
+   xmlns:gmlsf="http://www.opengis.net/gmlsf"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   elementFormDefault="qualified"
+   version="073004">
+
+   <xs:annotation>
+      <xs:appinfo source="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd">
+         <gmlsf:ConformanceLevel>1</gmlsf:ConformanceLevel>
+         <gmlsf:GMLProfileSchema>http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd</gmlsf:GMLProfileSchema>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:import namespace="http://www.opengis.net/gml"
+       schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gmlsf"
+       schemaLocation="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd"/>
+   <xs:import namespace="http://www.fgdc.gov/framework/073004"
+       schemaLocation="Framework_GMLSF1.xsd"/>
+
+   <xs:complexType name="PositionalAccuracyPropertyType">
+      <xs:sequence>
+         <xs:element ref="dq:PositionalAccuracy"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="PositionalAccuracy">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="nameOfMeasurement"
+                        type="xs:string"
+                        minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="measureIdentification"
+                        type="xs:string" minOccurs="0"/>
+            <xs:element name="measureDescription"
+                        type="xs:string" minOccurs="0"/>
+            <xs:element name="evaluationMethodType">
+               <xs:complexType>
+                  <xs:simpleContent>
+                     <xs:restriction base="gml:CodeType">
+                        <xs:attribute name="codeSpace"
+                                      type="xs:anyURI" use="optional"
+                                      default="./Dictionaries/EvaluationMethodTypeDictionary.xml"/>
+                     </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="evaluationMethodDescription"
+                        type="xs:string" minOccurs="0"/>
+            <xs:element name="evaluationProcedure"
+                        type="xs:string" minOccurs="0"/>
+            <xs:element name="dateTime"
+                        type="xs:dateTime"
+                        minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="result"
+                        type="xs:string"
+                        minOccurs="1" maxOccurs="2"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

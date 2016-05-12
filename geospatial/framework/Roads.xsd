@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+   targetNamespace="http://www.fgdc.gov/framework/073004/transportation"
+   xmlns:trans="http://www.fgdc.gov/framework/073004/transportation"
+   xmlns:fw="http://www.fgdc.gov/framework/073004"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:gml="http://www.opengis.net/gml"
+   xmlns:gmlsf="http://www.opengis.net/gmlsf"
+   elementFormDefault="qualified"
+   version="0.0.4">
+
+   <xs:annotation>
+      <xs:appinfo source="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd">
+         <gmlsf:ConformanceLevel>1</gmlsf:ConformanceLevel>
+         <gmlsf:GMLProfileSchema>http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd</gmlsf:GMLProfileSchema>
+      </xs:appinfo>
+   </xs:annotation>
+
+
+   <xs:import namespace="http://www.opengis.net/gml"
+       schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gmlsf"
+       schemaLocation="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd"/>
+   <xs:import namespace="http://www.fgdc.gov/framework/073004"
+       schemaLocation="Framework_GMLSF1.xsd"/>
+   <xs:include schemaLocation="BaseTransportation_GMLSF1.xsd"/>
+
+
+   <!-- ================================================================= -->
+   <!-- ROAD PATH                                                         -->
+   <!-- ================================================================= -->
+   <xs:element name="RoadPath"
+               type="trans:RoadPathType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="RoadPathType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="lastUpdateDate" type="dateTime"/>
+               <xs:element name="identifier" type="fw:IdentifierPropertyType"/>
+               <xs:element name="geometry"
+                           type="gml:MultiCurvePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="metadata"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="topology"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="attribute"
+                           type="fw:ExtendedAttributePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <!-- ====================================================== -->
+               <xs:element name="routeNumber" type="xs:string"/>
+               <!-- ====================================================== -->
+               <xs:element name="to"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadPath/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="from"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadPath/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="segment"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadSeg/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <!-- ================================================================= -->
+   <!-- ROAD SEG                                                          -->
+   <!-- ================================================================= -->
+   <xs:element name="RoadSeg"
+               type="trans:RoadSegType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="RoadSegType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="lastUpdateDate" type="dateTime"/>
+               <xs:element name="identifier" type="fw:IdentifierPropertyType"/>
+               <xs:element name="geometry"
+                           type="gml:CurvePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="metadata"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="topology"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="attribute"
+                           type="fw:ExtendedAttributePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <!-- ====================================================== -->
+               <xs:element name="status"
+                           type="xs:string"/>
+               <xs:element name="fieldMeasure"
+                           type="gml:MeasureType"/>
+               <xs:element name="length"
+                           type="gml:MeasureType"/>
+               <!-- ====================================================== -->
+               <xs:element name="isAnchorSection"
+                           type="xs:boolean" default="false"/>
+               <!-- ====================================================== -->
+               <xs:element name="to"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadSeg/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="from"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadSeg/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="startPoint"
+                           type="gml:ReferenceType" minOccurs="0">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadPoint/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="endPoint"
+                           type="gml:ReferenceType" minOccurs="0">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadPoint/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <!-- ================================================================= -->
+   <!-- ROAD POINT                                                        -->
+   <!-- ================================================================= -->
+   <xs:element name="RoadPoint"
+               type="trans:RoadPointType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="RoadPointType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="lastUpdateDate" type="dateTime"/>
+               <xs:element name="identifier" type="fw:IdentifierPropertyType"/>
+               <xs:element name="geometry"
+                           type="gml:PointPropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="metadata"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="topology"
+                           type="xs:anyURI"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="attribute"
+                           type="fw:ExtendedAttributePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <!-- ====================================================== -->
+               <xs:element name="isAnchorPoint"
+                           type="xs:boolean" default="false"/>
+               <!-- ====================================================== -->
+               <xs:element name="to"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadPoint/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="from"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadPoint/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="startedSegment"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadSeg/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="endedSegment"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">trans:RoadSeg/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

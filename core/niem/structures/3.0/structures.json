@@ -1,0 +1,16 @@
+{
+  "definitions": {
+    "relationshipMetadata": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "string"
+    },
+    "ref": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    }
+  }
+}

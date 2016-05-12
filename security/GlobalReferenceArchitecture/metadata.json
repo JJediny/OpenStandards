@@ -1,0 +1,784 @@
+{
+  "definitions": {
+    "itojpgovgspservices100:SummaryTextType": {
+      "maxLength": 160,
+      "type": "string"
+    },
+    "itojpgovgspservices100:DomainDescriptionType": {
+      "required": [
+        "DomainNameText"
+      ],
+      "type": "object",
+      "properties": {
+        "DomainNameText": {
+          "type": "string"
+        }
+      }
+    },
+    "itojpgovgspservices100:PersonContactInformationType": {
+      "required": [
+        "ContactPersonName",
+        "ContactPersonPhoneNumberID"
+      ],
+      "type": "object",
+      "properties": {
+        "ContactPersonName": {
+          "type": "string"
+        },
+        "ContactPersonEmailID": {
+          "type": "string"
+        },
+        "ContactPersonPhoneNumberID": {
+          "type": "string"
+        },
+        "ContactPersonAddress": {
+          "type": "string"
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceActionType": {
+      "required": [
+        "ActionName",
+        "ActionPurpose",
+        "MessageExchangePattern"
+      ],
+      "type": "object",
+      "properties": {
+        "ActionName": {
+          "type": "string"
+        },
+        "ActionPurpose": {
+          "type": "string"
+        },
+        "MessageExchangePattern": {
+          "type": "string"
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceInteractionProfileType": {
+      "required": [
+        "SIPName",
+        "SIPVersion"
+      ],
+      "type": "object",
+      "properties": {
+        "SIPName": {
+          "type": "string"
+        },
+        "SIPVersion": {
+          "type": "string"
+        }
+      }
+    },
+    "itojpgovgspservices100:ApplicablePolicies": {
+      "required": [
+        "PolicyText"
+      ],
+      "type": "object",
+      "properties": {
+        "PolicyText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:Classifications": {
+      "required": [
+        "Classification"
+      ],
+      "type": "object",
+      "properties": {
+        "Classification": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:Endorsements": {
+      "required": [
+        "Endorser"
+      ],
+      "type": "object",
+      "properties": {
+        "Endorser": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:ExchangePartnerTypes": {
+      "required": [
+        "ExchangePartnerTypeDescriptionText"
+      ],
+      "type": "object",
+      "properties": {
+        "ExchangePartnerTypeDescriptionText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceCapabilities": {
+      "required": [
+        "CapabilityDescriptionText"
+      ],
+      "type": "object",
+      "properties": {
+        "CapabilityDescriptionText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceDescriptionKeywords": {
+      "type": "object",
+      "properties": {
+        "ServiceDescriptionKeywordText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceRealWorldEffects": {
+      "type": "object",
+      "properties": {
+        "RealWorldEffectDescriptionText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "itojpgovgspservices100:Sponsors": {
+      "required": [
+        "Sponsor"
+      ],
+      "type": "object",
+      "properties": {
+        "Sponsor": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:BusinessContextType": {
+      "required": [
+        "DomainDescription"
+      ],
+      "type": "object",
+      "properties": {
+        "DomainDescription": {
+          "$ref": "#/definitions/itojpgovgspservices100:DomainDescriptionType"
+        },
+        "Classifications": {
+          "$ref": "#/definitions/itojpgovgspservices100:Classifications"
+        },
+        "ExchangePartnerTypes": {
+          "$ref": "#/definitions/itojpgovgspservices100:ExchangePartnerTypes"
+        },
+        "Endorsements": {
+          "$ref": "#/definitions/itojpgovgspservices100:Endorsements"
+        },
+        "Sponsors": {
+          "$ref": "#/definitions/itojpgovgspservices100:Sponsors"
+        }
+      }
+    },
+    "itojpgovgspservices100:CostType": {
+      "type": "object",
+      "properties": {
+        "UsageCostAmount": {
+          "$ref": "#/definitions/itojpgovgspservices100:AmountType"
+        },
+        "UsageUnitCostAmount": {
+          "$ref": "#/definitions/itojpgovgspservices100:AmountType"
+        },
+        "CreationCostAmount": {
+          "$ref": "#/definitions/itojpgovgspservices100:AmountType"
+        }
+      }
+    },
+    "itojpgovgspservices100:IEPDReferenceType": {
+      "required": [
+        "IEPDURL",
+        "IEPDName"
+      ],
+      "type": "object",
+      "properties": {
+        "IEPDURL": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 1
+        },
+        "IEPDName": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:OrganizationType": {
+      "type": "object",
+      "properties": {
+        "OrganizationWebSiteURL": {
+          "type": "string",
+          "format": "uri"
+        },
+        "OrganizationPointOfContact": {
+          "$ref": "#/definitions/itojpgovgspservices100:PersonContactInformationType"
+        },
+        "OrganizationName": {
+          "type": "string"
+        },
+        "OrganizationAcronym": {
+          "type": "string"
+        },
+        "OrganizationFullAddressText": {
+          "type": "string"
+        },
+        "OrganizationRoleDescriptionText": {
+          "type": "string"
+        },
+        "OrganizationRoleDetailedDescriptionText": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "OrganizationName",
+        "OrganizationRoleDescriptionText"
+      ]
+    },
+    "itojpgovgspservices100:PerformanceMetricsType": {
+      "required": [
+        "ServiceResponseTime"
+      ],
+      "type": "object",
+      "properties": {
+        "ServiceResponseTime": {
+          "type": "xs:duration"
+        },
+        "ServiceAverageThroughput": {
+          "type": "string"
+        },
+        "ServiceMaximumThroughput": {
+          "type": "string"
+        },
+        "ServiceAvailability": {
+          "type": "string"
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceDescriptionType": {
+      "type": "object",
+      "properties": {
+        "ServiceDescriptionSummaryText": {
+          "$ref": "#/definitions/itojpgovgspservices100:SummaryTextType"
+        },
+        "ServiceCapabilities": {
+          "$ref": "#/definitions/itojpgovgspservices100:ServiceCapabilities"
+        },
+        "ServiceRealWorldEffects": {
+          "$ref": "#/definitions/itojpgovgspservices100:ServiceRealWorldEffects"
+        },
+        "ServiceDependencies": {
+          "$ref": "#/definitions/itojpgovgspservices100:ServiceDependencies"
+        },
+        "IEPDReferences": {
+          "$ref": "#/definitions/itojpgovgspservices100:IEPDReferences"
+        },
+        "ServicePurposeText": {
+          "type": "string"
+        },
+        "ServiceScopeDescriptionText": {
+          "type": "string"
+        },
+        "ServiceDescriptionText": {
+          "type": "string"
+        },
+        "ServiceDescriptionKeywordText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "ServiceCapabilities",
+        "ServiceRealWorldEffects",
+        "ServicePurposeText",
+        "ServiceScopeDescriptionText"
+      ]
+    },
+    "itojpgovgspservices100:ServiceIdentificationType": {
+      "type": "object",
+      "properties": {
+        "ServiceURI": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 0
+        },
+        "ServiceFullNameText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "ServiceID": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "ServiceNameAbbreviationText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceInterfaceSpecificationType": {
+      "required": [
+        "URIDetails",
+        "SecurityImplementedIndicator"
+      ],
+      "type": "object",
+      "properties": {
+        "URIDetails": {
+          "$ref": "#/definitions/itojpgovgspservices100:URIDetails"
+        },
+        "ServiceActions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:ServiceActions"
+          },
+          "minItems": 0
+        },
+        "ServiceInteractionProfiles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:ServiceInteractionProfiles"
+          },
+          "minItems": 0
+        },
+        "SecurityImplementedIndicator": {
+          "type": "boolean"
+        },
+        "SecurityDescriptionText": {
+          "type": "string"
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceLevelAgreementsType": {
+      "required": [
+        "ServicePolicyAndContracts",
+        "PerformanceMetrics",
+        "ServiceUsageDetails"
+      ],
+      "type": "object",
+      "properties": {
+        "ServicePolicyAndContracts": {
+          "$ref": "#/definitions/itojpgovgspservices100:ServicePolicyAndContractsType"
+        },
+        "PerformanceMetrics": {
+          "$ref": "#/definitions/itojpgovgspservices100:PerformanceMetricsType"
+        },
+        "ServiceUsageDetails": {
+          "$ref": "#/definitions/itojpgovgspservices100:ServiceUsageType"
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceMetadataType": {
+      "required": [
+        "ServiceIdentification",
+        "ServiceDescription",
+        "VersionInformation",
+        "BusinessContext",
+        "ServiceLevelAgreements"
+      ],
+      "type": "object",
+      "properties": {
+        "ServiceIdentification": {
+          "$ref": "#/definitions/itojpgovgspservices100:ServiceIdentificationType"
+        },
+        "ServiceDescription": {
+          "$ref": "#/definitions/itojpgovgspservices100:ServiceDescriptionType"
+        },
+        "VersionInformation": {
+          "$ref": "#/definitions/itojpgovgspservices100:VersionInformationType"
+        },
+        "RelatedOrganizationInformation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:RelatedOrganizationInformation"
+          },
+          "minItems": 0
+        },
+        "BusinessContext": {
+          "$ref": "#/definitions/itojpgovgspservices100:BusinessContextType"
+        },
+        "ServiceInterface": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:ServiceInterfaceSpecificationType"
+          },
+          "minItems": 0
+        },
+        "ServiceLevelAgreements": {
+          "$ref": "#/definitions/itojpgovgspservices100:ServiceLevelAgreementsType"
+        }
+      }
+    },
+    "itojpgovgspservices100:ServicePolicyAndContractsType": {
+      "type": "object",
+      "properties": {
+        "ApplicablePolicies": {
+          "$ref": "#/definitions/itojpgovgspservices100:ApplicablePolicies"
+        },
+        "ApplicableContracts": {
+          "$ref": "#/definitions/itojpgovgspservices100:ApplicableContracts"
+        },
+        "ApplicableAgreements": {
+          "$ref": "#/definitions/itojpgovgspservices100:ApplicableAgreements"
+        },
+        "ApplicableUmbrellaAgreements": {
+          "$ref": "#/definitions/itojpgovgspservices100:ApplicableUmbrellaAgreements"
+        },
+        "ApplicablePoliciesIndicator": {
+          "type": "boolean"
+        },
+        "ApplicableContractsIndicator": {
+          "type": "boolean"
+        },
+        "ApplicableAgreementsIndicator": {
+          "type": "boolean"
+        },
+        "ApplicableUmbrellaAgreementsIndicator": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ApplicablePoliciesIndicator",
+        "ApplicableContractsIndicator",
+        "ApplicableAgreementsIndicator",
+        "ApplicableUmbrellaAgreementsIndicator"
+      ]
+    },
+    "itojpgovgspservices100:ServiceUsageType": {
+      "type": "object",
+      "properties": {
+        "LicensingAgreement": {
+          "type": "itojpgovgspservices100:AgreementType"
+        },
+        "ServiceCost": {
+          "$ref": "#/definitions/itojpgovgspservices100:CostType"
+        },
+        "ApprovalRequiredIndicator": {
+          "type": "boolean"
+        },
+        "LicensingRequiredIndicator": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ApprovalRequiredIndicator",
+        "LicensingRequiredIndicator"
+      ]
+    },
+    "itojpgovgspservices100:URIDetailType": {
+      "required": [
+        "URIAddress",
+        "URIDescription"
+      ],
+      "type": "object",
+      "properties": {
+        "URIAddress": {
+          "type": "string",
+          "format": "uri"
+        },
+        "URIDescription": {
+          "type": "string"
+        }
+      }
+    },
+    "itojpgovgspservices100:VersionInformationType": {
+      "required": [
+        "CreationDate",
+        "MajorVersion",
+        "MinorVersion",
+        "LifecycleStatus"
+      ],
+      "type": "object",
+      "properties": {
+        "CreationDate": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "ActivationDate": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "LastRevisionDate": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "NextRevisionDate": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "ExpirationDate": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "AlertsAndNotifications": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 0
+        },
+        "MajorVersion": {
+          "type": "integer"
+        },
+        "MinorVersion": {
+          "type": "integer"
+        },
+        "RevisionVersion": {
+          "type": "integer"
+        },
+        "LifecycleStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "itojpgovgspservices100:ApplicableAgreements": {
+      "required": [
+        "Agreement"
+      ],
+      "type": "object",
+      "properties": {
+        "Agreement": {
+          "type": "array",
+          "items": {
+            "type": "itojpgovgspservices100:AgreementType"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:ApplicableContracts": {
+      "required": [
+        "Contract"
+      ],
+      "type": "object",
+      "properties": {
+        "Contract": {
+          "type": "array",
+          "items": {
+            "type": "itojpgovgspservices100:AgreementType"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:ApplicableUmbrellaAgreements": {
+      "required": [
+        "UmbrellaAgreement"
+      ],
+      "type": "object",
+      "properties": {
+        "UmbrellaAgreement": {
+          "type": "array",
+          "items": {
+            "type": "itojpgovgspservices100:AgreementType"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:IEPDReferences": {
+      "required": [
+        "IEPDReference"
+      ],
+      "type": "object",
+      "properties": {
+        "IEPDReference": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:IEPDReferenceType"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:RelatedOrganizationInformation": {
+      "required": [
+        "Organization"
+      ],
+      "type": "object",
+      "properties": {
+        "Organization": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:OrganizationType"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceActions": {
+      "required": [
+        "ServiceAction"
+      ],
+      "type": "object",
+      "properties": {
+        "ServiceAction": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:ServiceActionType"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceDependencies": {
+      "type": "object",
+      "properties": {
+        "ServiceDependency": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:ServiceIdentificationType"
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "itojpgovgspservices100:ServiceInteractionProfiles": {
+      "required": [
+        "ServiceInteractionProfile"
+      ],
+      "type": "object",
+      "properties": {
+        "ServiceInteractionProfile": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:ServiceInteractionProfileType"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:URIDetails": {
+      "required": [
+        "URIDetail"
+      ],
+      "type": "object",
+      "properties": {
+        "URIDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/itojpgovgspservices100:URIDetailType"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "itojpgovgspservices100:AmountType": {
+      "type": "object",
+      "properties": {
+        "itojpgovgspservices100:currencyText": {
+          "$ref": "#/definitions/@itojpgovgspservices100:currencyText"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    },
+    "unitMeasureText": {
+      "type": "string"
+    },
+    "currencyText": {
+      "type": "string"
+    }
+  },
+  "type": "string"
+}

@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema targetNamespace="http://www.fgdc.gov/framework/073004/gubs"
+   xmlns:gubs="http://www.fgdc.gov/framework/073004/gubs"
+   xmlns:fw="http://www.fgdc.gov/framework/073004"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:gml="http://www.opengis.net/gml"
+   xmlns:gmlsf="http://www.opengis.net/gmlsf" elementFormDefault="qualified"
+   version="0.0.4">
+   <xs:annotation>
+      <xs:appinfo
+         source="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd">
+         <gmlsf:ConformanceLevel>1</gmlsf:ConformanceLevel>
+         <gmlsf:GMLProfileSchema>http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd</gmlsf:GMLProfileSchema>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import namespace="http://www.opengis.net/gml"
+      schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gmlsf"
+      schemaLocation="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd"/>
+   <xs:import namespace="http://www.fgdc.gov/framework/073004"
+      schemaLocation="Framework_GMLSF1.xsd"/>
+
+
+
+   <xs:complexType name="BoundaryClassifierPropertyType">
+      <xs:sequence>
+         <xs:element ref="gubs:BoundaryClassifier"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="BoundaryClassifier">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="boundaryClassifier" type="xs:string"/>
+            <xs:element name="boundaryClassifierReference" type="xs:string"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="GovtUnits"
+               type="gubs:GovtUnitsType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="GovtUnitsType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="metadata" type="xs:string"/>
+               <xs:element name="geographicArea"
+                           type="gml:ReferenceType"
+                           maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:GeographicArea/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="boundary"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:Boundary/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <xs:element name="GeographicArea"
+               type="gubs:GeographicAreaType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="GeographicAreaType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="unitId"
+                           type="fw:IdentifierPropertyType"/>
+               <xs:element name="typeAbbreviation"
+                           type="xs:string"
+                           minOccurs="0"/>
+               <xs:element name="instanceName"
+                           type="xs:string"/>
+               <xs:element name="instanceAlternativeName"
+                           type="xs:string"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="officialDescription"
+                           type="xs:string"
+                           minOccurs="0"/>
+               <xs:element name="instanceCode"
+                           type="xs:string"/>
+               <xs:element name="codingSystemReference"
+                           type="xs:string"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="effectiveDate"
+                           type="xs:date"
+                           minOccurs="0" maxOccurs="2"/>
+               <xs:element name="geometry"
+                           type="gml:SurfacePropertyType"
+                           maxOccurs="unbounded"/>
+               <xs:element name="extended"
+                           type="fw:ExtendedAttributePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="boundedBy" type="gml:ReferenceType"
+                  maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:Boundary/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <xs:element name="StatisticalUnit"
+               type="gubs:StatisticalUnitType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="StatisticalUnitType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="unitId"
+                           type="fw:IdentifierPropertyType"/>
+               <xs:element name="typeAbbreviation"
+                           type="xs:string"
+                           minOccurs="0"/>
+               <xs:element name="instanceName"
+                           type="xs:string"/>
+               <xs:element name="instanceAlternativeName"
+                           type="xs:string"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="officialDescription"
+                           type="xs:string"
+                           minOccurs="0"/>
+               <xs:element name="instanceCode"
+                           type="xs:string"/>
+               <xs:element name="codingSystemReference"
+                           type="xs:string"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="effectiveDate"
+                           type="xs:date"
+                           minOccurs="0" maxOccurs="2"/>
+               <xs:element name="geometry"
+                           type="gml:SurfacePropertyType"
+                           maxOccurs="unbounded"/>
+               <xs:element name="extended"
+                           type="fw:ExtendedAttributePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="boundedBy"
+                           type="gml:ReferenceType"
+                           maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:Boundary/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="statisticalUnitType">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:CodeType">
+                           <xs:attribute name="codeSpace"
+                           type="xs:anyURI" use="optional"
+                           default="../StatisticalUnitTypeDictionary.xml"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="typeDefinition"
+                           type="xs:string"
+                           minOccurs="0"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <xs:element name="AdministrativeUnit"
+               type="gubs:AdministrativeUnitType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="AdministrativeUnitType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="unitId"
+                           type="fw:IdentifierPropertyType"/>
+               <xs:element name="typeAbbreviation"
+                           type="xs:string"
+                           minOccurs="0"/>
+               <xs:element name="instanceName"
+                           type="xs:string"/>
+               <xs:element name="instanceAlternativeName"
+                           type="xs:string"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="officialDescription"
+                           type="xs:string"
+                           minOccurs="0"/>
+               <xs:element name="instanceCode"
+                           type="xs:string"/>
+               <xs:element name="codingSystemReference"
+                           type="xs:string"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="effectiveDate"
+                           type="xs:date"
+                           minOccurs="0" maxOccurs="2"/>
+               <xs:element name="geometry"
+                           type="gml:SurfacePropertyType"
+                           maxOccurs="unbounded"/>
+               <xs:element name="extended"
+                           type="fw:ExtendedAttributePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="boundedBy" type="gml:ReferenceType"
+                  maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:Boundary/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="administrativeUnitType">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:CodeType">
+                           <xs:attribute name="codeSpace"
+                           type="xs:anyURI" use="optional"
+                           default="../AdministrativeUnitTypeDictionary.xml"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="typeDefinition"
+                           type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <xs:element name="GovernmentalUnit"
+               type="gubs:GovernmentalUnitType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="GovernmentalUnitType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="unitId"
+                           type="fw:IdentifierPropertyType"/>
+               <xs:element name="typeAbbreviation"
+                           type="xs:string"
+                           minOccurs="0"/>
+               <xs:element name="instanceName"
+                           type="xs:string"/>
+               <xs:element name="instanceAlternativeName"
+                           type="xs:string"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="officialDescription"
+                           type="xs:string"
+                           minOccurs="0"/>
+               <xs:element name="instanceCode"
+                           type="xs:string"/>
+               <xs:element name="codingSystemReference"
+                           type="xs:string"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="effectiveDate"
+                           type="xs:date" minOccurs="0"
+                           maxOccurs="2"/>
+               <xs:element name="geometry"
+                           type="gml:SurfacePropertyType"
+                           maxOccurs="unbounded"/>
+               <xs:element name="extended"
+                           type="fw:ExtendedAttributePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="governmentalUnitType">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:CodeType">
+                           <xs:attribute name="codeSpace"
+                           type="xs:anyURI" use="optional"
+                           default="../GovernmentalUnitTypeDictionary.xml"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="typeDefinition"
+                           type="xs:string" minOccurs="0"/>
+               <!-- ======================================================= -->
+               <xs:element name="boundedBy"
+                           type="gml:ReferenceType"
+                           maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:Boundary/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <xs:element name="OtherUnit"
+               type="gubs:OtherUnitType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="OtherUnitType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="unitId" type="fw:IdentifierPropertyType"/>
+               <xs:element name="typeAbbreviation" type="xs:string"
+                  minOccurs="0"/>
+               <xs:element name="instanceName" type="xs:string"/>
+               <xs:element name="instanceAlternativeName" type="xs:string"
+                  minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="officialDescription" type="xs:string"
+                  minOccurs="0"/>
+               <xs:element name="instanceCode" type="xs:string"/>
+               <xs:element name="codingSystemReference" type="xs:string"
+                  minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="effectiveDate" type="xs:date" minOccurs="0"
+                  maxOccurs="2"/>
+               <xs:element name="geometry" type="gml:SurfacePropertyType"
+                  maxOccurs="unbounded"/>
+               <xs:element name="extended"
+                  type="fw:ExtendedAttributePropertyType" minOccurs="0"
+                  maxOccurs="unbounded"/>
+               <xs:element name="boundedBy" type="gml:ReferenceType"
+                  maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:Boundary/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="otherUnitType">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:CodeType">
+                           <xs:attribute name="codeSpace"
+                           type="xs:anyURI" use="optional"
+                           default="../OtherUnitTypeDictionary.xml"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="typeDefinition"
+                           type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <xs:element name="Boundary"
+               type="gubs:BoundaryType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="BoundaryType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="boundaryId"
+                           type="fw:IdentifierPropertyType"/>
+               <xs:element name="officialDescription"
+                           type="xs:string" minOccurs="0"/>
+               <xs:element name="boundaryClassifier"
+                           type="gubs:BoundaryClassifierPropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="effectiveDate"
+                           type="xs:date"
+                           minOccurs="0" maxOccurs="2"/>
+               <xs:element name="curve"
+                           type="gml:CurvePropertyType"
+                           maxOccurs="unbounded"/>
+               <xs:element name="extended"
+                           type="fw:ExtendedAttributePropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="changeControlledBy"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:MaintenanceRelationship/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <xs:element name="MaintenanceRelationship"
+               type="gubs:MaintenanceRelationshipType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="MaintenanceRelationshipType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="fromMaintUnit"
+                           type="gml:ReferenceType" minOccurs="0">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:GeographicArea/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="toMaintUnit"
+                           type="gml:ReferenceType"
+                           minOccurs="1" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:GeographicArea/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="maintRefId" type="fw:IdentifierPropertyType"/>
+               <xs:element name="changeDeterminationType">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:CodeType">
+                           <xs:attribute name="codeSpace"
+                           type="xs:anyURI" use="optional"
+                           default="../DeterminationTypeDictionary.xml"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="changeType">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:CodeType">
+                           <xs:attribute name="codeSpace"
+                           type="xs:anyURI" use="optional"
+                           default="../SpatialChangeTypeDictionary.xml"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="sharedBoundaryId"
+                           type="fw:IdentifierPropertyType"
+                           minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element name="controlsChangesTo"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:Boundary/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+   <xs:element name="SpatialRelationship"
+               type="gubs:SpatialRelationshipType"
+               substitutionGroup="gml:_Feature"/>
+   <xs:complexType name="SpatialRelationshipType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="fromSpUnit"
+                           type="gml:ReferenceType" minOccurs="0">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:GeographicArea/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="toSpUnit"
+                           type="gml:ReferenceType"
+                           minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:appinfo source="urn:x-gml:targetElement">gubs:GeographicArea/@gml:id</xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="fromToSpatialRelationship">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:CodeType">
+                           <xs:attribute name="codeSpace"
+                           type="xs:anyURI" use="optional"
+                           default="../SpatialRelationshipTypeDictionary.xml"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+
+</xs:schema>
