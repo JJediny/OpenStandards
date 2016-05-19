@@ -1,0 +1,92 @@
+# OpenControl schema PROPOSED v3 to accomidate system topology, architecture, and relationships to other components
+# to create a system architecture ideally mapping to a "functional" representation of a system that simulatiously
+# serves to document the system state for security and devops. Additionally each component has an owner, manager, user,
+
+---
+category: Component
+schema_version: 3.0
+name: RHELv7
+description: Host Operating System
+
+# For System Architure
+id: Platform.RHELv7 # For type.name.yml (ex. Webserver.NGINX, Database.Postgres)
+group: Platform
+node:
+  - type: Root # Compute, SoftwareComponent, DBMS, Database, Webserver, WebApplication, BlockStorage, ObjectStorage, Load Balencer (Node type per OASIS TOSCA v1.0)
+  - type: Compute
+capabilities:
+  - type: OperatingSystem # Endpoint, Endpoint.Admin, Endpoint.Public, Scalable, Endpoint.Database, Attachment, network.Linkable, network.Bindable, OperatingSystem, Container.Docker (Capablities type per OASIS TOSCA v1.0)
+  - type: Endpoint.Admin
+  - type: network.Linkable
+  - type: network.Bindable
+  - type: Scalable
+relationships:
+  - type: HostedOn # ConnectsTo, AttachesTo, RoutesTo, network.LinksTo, network.BindsTo
+    id: Infrastructure.ec2
+  - type: network.BindsTo
+    id: Infrastructure.ec2
+  - type: network.BindsTo
+    id: Infrastructure.sshJumpbox
+  - type: network.BindsTo
+    id: Infrastructure.PrivateSubnet
+  - type: DependsOn
+    id: Platform.LinuxKernel
+  - type: ConnectsTo
+    id: Platform.Kubernetes
+  - type: network.BindsTo
+    id: Platform.DockerDeamon
+  - type: AttachesTo
+    id: Infrastructure.ebs
+artifacts:
+  - type: File # Implementation, Implementation.Bash, Implementation.Python, Deployment.Image.Container.Docker, Deployment.Image.VM.ISO,  Deployment, Deployment.Image, Deployment.Image.VM,
+    id: Infrastructure.ebs
+policies:
+  - type: Placement # Scaling, Update, Performance, Placement
+    id: Infrastructure.AutoScaling
+  - type: Scaling # Scaling, Update, Performance, Placement
+    id: Infrastructure.AutoScaling
+
+# Realizing Interfaces should be a seperate datafile ref by Relationships
+#interfaces:
+#  - type: Endpoint.Admin
+#    datatype: Infrastructure.PrivateSubnet
+#    port: 22
+#    protocol: SSH
+#    operation:
+#      - type: start # create, configure, start, stop, delete, pre_configure_source, pre_configure_target, post_configure_source, post_configure_target, add_target, remove_target, add_source, target_changed
+#        input: SSH secure tunnel from Jumpbox with seperate shared private keypair over private subnet
+#        output: SSH access to host OS terminal as non-root, but with sudo permissions {{ Users.datagov }}
+
+# For Documentation
+users:
+  - type: Owner
+    id: Users.GSA-BSP
+  - type: Maintainer
+    id: Users.GSA-BSP
+  - type: Operator
+    id: Users.datagov
+
+implementation:
+  - task:
+    url:
+    status: doing # done = implemented, doing = partially implemented, todo = not implemented
+controls:
+  - standard: NIST-800-53 # Standard Key
+    control: CM-2 # Control Key
+    narrative: Text ... # Justification text
+    policies:
+      - verification_key: test_verification_1 #The specific verification ID that the reference links, no component or system is needed for internal references
+      - system_key: other_system # System name of the verification (can link to other systems / components)
+        component_key: other_component # System name of the verification (can link to other systems / components)
+        verification_key: other_key # The specific verification ID that the reference links to
+
+# From OpenControl Schema 2.0
+references:
+  - name: EC2 Diagram # Name of the reference
+    path: diagrams/diagram-1.png # Relative path of local file or URL ie. diagrams/diagram-1.png
+    type: Image # Type of reference ie. Image, URL
+verifications:
+  - key: test_verification_1 # Key of verification
+    name: TEST 1 # Name of verification
+    path: diagrams/diagram-1.png # Relative path of local file or URL ie.
+    type: Image # Type of reference ie. Image, URL
